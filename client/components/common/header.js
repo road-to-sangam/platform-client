@@ -16,11 +16,11 @@ const Header = () => {
             HOME
           </Link>
           <Link
-            to="/shop"
+            to="/shop/login"
             className="common-header-mobileMenu-item"
             onClick={() => { setMobileMenu(false) }}
           >
-            SHOP
+            LOGIN
           </Link>
         </div>
       )
@@ -37,13 +37,25 @@ const Header = () => {
             to="/"
             className="common-header-links-item"
           >
-            HOME
+            Home
           </Link>
           <Link
-            to="/shop"
+            to="/shop/sign-up"
             className="common-header-links-item"
           >
-            SHOP
+            Sign Up
+          </Link>
+          <Link
+            to="/shop/cart"
+            className="common-header-links-item"
+          >
+            Cart
+          </Link>
+          <Link
+            to="/shop/login"
+            className="common-header-links-item"
+          >
+            Login
           </Link>
         </div>
         {/* mobile links xs/sm/md breakpoints */}

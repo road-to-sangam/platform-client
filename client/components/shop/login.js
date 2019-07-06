@@ -14,7 +14,7 @@ const Login = (props) => {
   const [validations, setValidations] = useState({})
   const handleSubmit = async () => {
     try {
-      const loginObj = await loginSchema.validate({ email, password }, { abortEarly: false })
+      const loginObj = await loginSchema().validate({ email, password }, { abortEarly: false })
       props.login(loginObj)
     } catch (err) {
       setValidations(validationErrHelper(err.inner))

@@ -12,14 +12,12 @@
     width: 100%;
     min-width: 70%;
     border-color: transparent;
+    background: transparent;
   }
   .form-entry-icon{
     font-size: 2em;
     color: $color-light-grey4;
-    // VERTICAL ALIGN
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-self: center;
   }
 }
 
