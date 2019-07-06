@@ -5,6 +5,7 @@ import { ConnectedRouter } from 'connected-react-router'
 import configureStore, { history } from './redux/configureStore'
 import './assets/scss/main.scss'
 import Main from './components/main'
+import 'dotenv/config';
 
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-undef */

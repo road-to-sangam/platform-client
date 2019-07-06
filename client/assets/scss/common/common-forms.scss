@@ -1,0 +1,30 @@
+.form-entry{
+  display: flex;
+  height: 3em;
+  border: 1px solid $color-light-grey4;
+  border-radius: 0.5em;
+  padding: 0.1em 1em;
+  margin: 1em 0;
+  &.form-entry-error{
+    border-color: red;
+  }
+  .form-entry-input{
+    width: 100%;
+    min-width: 70%;
+    border-color: transparent;
+    background: transparent;
+  }
+  .form-entry-icon{
+    font-size: 2em;
+    color: $color-light-grey4;
+    align-self: center;
+  }
+}
+
+.form-submit{
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 50%;
+  min-width: 14em;
+  background: $color-light-grey7;
+}

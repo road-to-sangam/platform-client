@@ -10,6 +10,7 @@
     "arrow-body-style": "off",
     "react/jsx-filename-extension": "off",
     "comma-dangle": "off",
-    "react/destructuring-assignment": "off"
+    "react/destructuring-assignment": "off",
+    "max-len": "off"
   }
 }

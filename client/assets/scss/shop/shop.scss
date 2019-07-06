@@ -1,0 +1,16 @@
+@import './shop-login.scss';
+
+.main-shop{
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  .main-shop-body{
+    padding: $header-height 0 $footer-height;
+  }
+}
+
+.root-shop{
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  width: 100%;
+  background: $color-light-grey3;
+}

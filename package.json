@@ -27,9 +27,11 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^2.0.2",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.2",
@@ -51,15 +53,21 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "connected-react-router": "^6.4.0",
+    "country-telephone-code": "^0.2.0",
+    "dotenv": "^8.0.0",
     "history": "^4.9.0",
+    "iso-country-codes": "0.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "universal-cookie": "^4.0.1",
+    "yup": "^0.27.0"
   },
   "husky": {
     "hooks": {
