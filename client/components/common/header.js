@@ -16,11 +16,11 @@ const Header = () => {
             HOME
           </Link>
           <Link
-            to="/todo"
+            to="/shop"
             className="common-header-mobileMenu-item"
             onClick={() => { setMobileMenu(false) }}
           >
-            Todo
+            SHOP
           </Link>
         </div>
       )
@@ -40,10 +40,10 @@ const Header = () => {
             HOME
           </Link>
           <Link
-            to="/todo"
+            to="/shop"
             className="common-header-links-item"
           >
-            TODO
+            SHOP
           </Link>
         </div>
         {/* mobile links xs/sm/md breakpoints */}

@@ -23,8 +23,9 @@ module.exports = merge(common, {
     proxy: [ // allows redirect of requests to webpack-dev-server to another destination
       {
         context: ['/api', '/auth', '/ws', '/js/variables.js'],  // can have multiple
-        target: 'http://localhost:8085',//'http://localhost:8085', // server and port to redirect to
+        target: 'http://localhost:3000',//'http://localhost:8085', // server and port to redirect to
         secure: false,
+        changeOrigin: true,
         ws: true
       },
     ],

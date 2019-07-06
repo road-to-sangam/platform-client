@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="common-footer">
       <Link to="/">HOME</Link>
-      <Link to="/todo">TODO</Link>
+      <Link to="/shop">SHOP</Link>
     </div>
   )
 }
