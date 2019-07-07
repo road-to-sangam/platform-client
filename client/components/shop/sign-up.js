@@ -8,6 +8,7 @@ import { signUpSchema, validationErrHelper, telephoneCodesArray } from '../../he
 import { signUp } from '../../redux/reducers/authentication'
 import Dropdown from '../common/dropdown'
 import FormField from '../common/form-field'
+import FormSubmit from '../common/form-submit'
 
 /* eslint-disable */
 const Login = (props) => {
@@ -125,15 +126,7 @@ const Login = (props) => {
             iconRight="icon-check"
           />
           {/* SUBMIT */}
-          <div
-            className="form-submit"
-            onClick={handleSubmit}
-            onKeyDown={() => {}}
-            tabIndex={0}
-            role="button"
-          >
-            Submit
-          </div>
+          <FormSubmit handleSubmit={handleSubmit} />
         </div>
       </div>
     </div>

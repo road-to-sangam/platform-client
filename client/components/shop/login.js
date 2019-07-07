@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { loginSchema, validationErrHelper } from '../../helpers/yup'
 import { login } from '../../redux/reducers/authentication'
+import FormField from '../common/form-field'
+import FormSubmit from '../common/form-submit'
 
 /* eslint-disable */
 const Login = (props) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [form, setForm] = useState({});
   const [validations, setValidations] = useState({})
   const handleSubmit = async () => {
     try {
-      const loginObj = await loginSchema().validate({ email, password }, { abortEarly: false })
+      setValidations({})
+      const loginObj = await loginSchema().validate(form, { abortEarly: false })
       props.login(loginObj)
     } catch (err) {
       setValidations(validationErrHelper(err.inner))
@@ -29,33 +30,21 @@ const Login = (props) => {
           <div className="main-shop-login-form-top-subtitle">Welcome Back</div>
         </div>
         <div className="main-shop-login-form-middle">
-          <div className={cx('form-entry', { 'form-entry-error': validations.email })}>
-            <input
-              className="form-entry-input"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              placeholder="Email"
-            />
-            <div className="form-entry-icon icon-check" />
-          </div>
-          <div className={cx('form-entry', { 'form-entry-error': validations.password })}>
-            <input
-              className="form-entry-input"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              placeholder="Password"
-            />
-            <div className="form-entry-icon icon-check" />
-          </div>
-          <div
-            className="form-submit"
-            onClick={handleSubmit}
-            onKeyDown={() => {}}
-            tabIndex={0}
-            role="button"
-          >
-            Submit
-          </div>
+          <FormField
+            value={form.email}
+            setValue={value => setForm({ ...form, email: value })}
+            validation={validations.email}
+            placeholder="Email"
+            iconRight="icon-check"
+          />
+           <FormField
+            value={form.password}
+            setValue={value => setForm({ ...form, password: value })}
+            validation={validations.password}
+            placeholder="Password"
+            iconRight="icon-check"
+          />
+          <FormSubmit handleSubmit={handleSubmit} />
         </div>
       </div>
     </div>

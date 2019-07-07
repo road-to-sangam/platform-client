@@ -5,12 +5,33 @@
   min-height: 100vh;
   position: relative;
   .main-shop-body{
+    font-size: 30px;
     padding: $header-height 0 $footer-height;
   }
 }
 
 .root-shop{
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  height: auto;
   width: 100%;
   background: $color-light-grey3;
+  .root-shop-welcome{
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .root-shop-welcome-links{
+      display: flex;
+      flex-direction: column;
+      .root-shop-welcome-link{
+        font-size: 1.5em;
+        background: $color-light-grey3;
+        width: 10em;
+        margin: 0.5em auto;
+        padding: 0.5em 1em;
+        text-align: center;
+      }
+    }
+  }
 }

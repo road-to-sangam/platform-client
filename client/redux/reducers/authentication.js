@@ -1,4 +1,4 @@
-// import { push } from 'connected-react-router'
+import { push } from 'connected-react-router'
 import Cookies from 'universal-cookie';
 
 const cookies = new Cookies();
@@ -36,6 +36,8 @@ export default (state = initialState, action) => {
 }
 
 //${process.env.API_PROVIDER_URL}
+
+export const historyPush = location => push(location)
 
 export const signUp = (formObj) => async (dispatch) => {
   try {
